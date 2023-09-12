@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  /*codificacion de colores*/
+    --light-red: hsl(0, 100%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --lighth-grey: hsl(0, 0%, 86%);
+    --smoke-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+  }
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+  background-color:var(--lighth-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#content {
+  width: 90rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#input {
+  width: 50%;
+  min-width: 20rem;
+  max-width: 40rem;
+  border: 1px solid var(--off-black);
+  display: flex;
+  flex-direction: column;
+  align-items:unset;
+  justify-content: start;
+  background-color:var(--white);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+#editor {
+  margin:6px;
+  resize: vertical;
+  background-color: var(--white);
+  border: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+#output {
+  width: 50%;
+  min-width: 30em;
+  max-width: 50rem;
+  border: 1px solid var(--off-black);
+  display: flex;
+  flex-direction: column;
+  align-items:unset;
+  justify-content: start;
+  background-color:var(--white);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+#preview {
+  height: fit-content;
+  margin:6px;
+}
+
+.box-titles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 2rem;
+  padding: 0rem 0.25rem;
+  border-bottom: 1px solid var(--off-black);
+  background-color:var(--off-white);
+}
+
+.min-max-icons {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.fa-solid {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.minimize {
+  visibility:hidden;
+}
+/*
+code {
+  background-color: var(--smoke-grey);
+  color: var(--white);
+}
+
+pre code {
+  display: block;
+  background-color: var(--smoke-grey);
+  padding: 6px;
+}
+*/
+blockquote {
+  border-left: 3px solid var(--off-black);
+  padding-left: 5px;
+  margin-left: 25px; 
+}
+
+td, th {
+  background-color: var(--off-white);
+  padding: 0.25rem;
+}
+
+table {
+  background-color: var(--off-black);
+}
+
+img {
+  width: 100%;
+}
+
+a{
+  color: var(--light-red)
+}
+
+@media only screen and (max-width:54rem) {
+
+  #content {
+    width: 42rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+
+  #input {
+    width:60%;
+    min-width: 20rem;
+    height: 25rem;
+  }
+
+  #output {
+    width: 75%;
+    min-width: 30rem;
+  }
+
+  }
